@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="Makanan"
+                android:text="Aktivitas"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:layout_marginStart="5dp"
-                android:text="Dalam 100gr :"
+                android:text="Dalam 30 menit :"
                 android:textColor="@color/black"
                 android:textSize="8sp"
                 tools:ignore="DuplicateIds" />
@@ -71,7 +71,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
+                    android:layout_marginStart="30dp"
                     android:textColor="@color/black"
                     android:text="250cal"
                     android:textSize="8sp"/>
@@ -81,66 +81,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="2dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lemak"
-                    android:textColor="@color/black"
-                    android:textSize="8dp"
-                    tools:ignore="TextSizeCheck" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:textColor="@color/black"
-                    android:text="15gr"
-                    android:textSize="8sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="2dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Protein"
-                    android:textColor="@color/black"
-                    android:textSize="8dp"
-                    tools:ignore="TextSizeCheck" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp"
-                    android:textColor="@color/black"
-                    android:text="20gr"
-                    android:textSize="8sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp">
-
-                <Button
-                    android:layout_width="40dp"
-                    android:layout_height="20dp"
-                    android:backgroundTint="@color/abuabu2"
-                    android:text="110cal"
-                    android:textColor="@color/black"
-                    android:textSize="10sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="35dp">
 
                 <Button
                     android:layout_width="35dp"
