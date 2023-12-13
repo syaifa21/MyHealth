@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.dicoding.myhealth.api.ApiConfig
-import com.dicoding.myhealth.api.Roles
-import com.dicoding.myhealth.api.RolesData
 import com.dicoding.myhealth.api.response.RegisterResponse
 import com.dicoding.myhealth.databinding.ActivityRegisterBinding
 import retrofit2.Call
