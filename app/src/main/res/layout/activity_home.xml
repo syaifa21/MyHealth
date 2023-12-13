@@ -116,13 +116,13 @@
         tools:layout_editor_absoluteY="302dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewRekomendasiMakanan"
+        android:id="@+id/recyclerViewRekomendasiAktivitas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:scrollbars="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:ignore="MissingConstraints"
+        tools:ignore="DuplicateIds,MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="337dp"
         tools:listitem="@layout/cardview2" />
