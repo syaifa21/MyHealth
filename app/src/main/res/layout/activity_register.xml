@@ -34,7 +34,7 @@
             android:layout_marginTop="10dp"
             android:hint="@string/hint_username">
 <EditText
-    android:id="@+id/ed_username_password"
+    android:id="@+id/ed_username_regis"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:singleLine="true"/>
@@ -50,7 +50,7 @@
             android:layout_marginTop="10dp"
             android:hint="@string/masukan_email">
 <EditText
-    android:id="@+id/ed_email_password"
+    android:id="@+id/ed_email_regis"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:singleLine="true"
@@ -68,7 +68,7 @@
             android:layout_marginTop="10dp"
             android:hint="@string/hint_password_edit_text">
             <com.dicoding.myhealth.widget.PasswordEditText
-                android:id="@+id/ed_register_password"
+                android:id="@+id/ed_password_regis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
@@ -114,4 +114,9 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:visibility="gone"/>
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

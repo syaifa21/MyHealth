@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
                             if(response.isSuccessful && res != null){
                                 sharedPreferences
                                     .edit()
-                                    .putString("token", res.username)
+                                    .putString("username", res.username)
                                     .apply()
 
                                 startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
