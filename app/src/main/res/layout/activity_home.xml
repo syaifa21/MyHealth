@@ -115,6 +115,7 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="302dp" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewRekomendasiAktivitas"
         android:layout_width="0dp"
@@ -124,9 +125,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:ignore="DuplicateIds,MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="337dp"
+        tools:layout_editor_absoluteY="397dp"
         tools:listitem="@layout/cardview2" />
-
 
     <Button
         android:id="@+id/logot"
@@ -137,6 +137,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:text="Button"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="234dp" />
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="329dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

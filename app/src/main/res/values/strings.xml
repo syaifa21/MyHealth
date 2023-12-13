@@ -8,4 +8,9 @@
     <string name="hint_password_edit_text">Password</string>
     <string name="belum_mempunyai_akun">Belum Punya Akun?</string>
     <string name="daftar">Daftar</string>
+    <string name="masukan_nama">Masukan Nama</string>
+    <string name="masukan_email">Masukan Email</string>
+    <string name="sudah_mempunyai_akun">Sudah Punya Akun</string>
+    <string name="masuk">Masuk</string>
+    <string name="hint_username">Username</string>
 </resources>

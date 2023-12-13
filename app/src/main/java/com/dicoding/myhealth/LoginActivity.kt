@@ -30,6 +30,11 @@ class LoginActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
         Log.d("Sharedtest", "ini $sharedPreferences")
+
+        binding.registerTextview.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+        }
+
         binding.loginBtn.setOnClickListener {
             if (binding.username.text?.isNotEmpty() == true && binding.edLoginPassword.text?.isNotEmpty() == true) {
                 lifecycleScope.launch {
