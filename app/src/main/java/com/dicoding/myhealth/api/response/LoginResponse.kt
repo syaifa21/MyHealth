@@ -2,19 +2,17 @@ package com.dicoding.myhealth.api.response
 
 import com.google.gson.annotations.SerializedName
 
-class LoginResponse (
+data class LoginResponse(
 
-    @SerializedName("id")
-    val id : Int? = null,
+	@field:SerializedName("roles")
+	val roles: List<Any?>? = null,
 
-    @SerializedName("username")
-    val username : String? = null,
+	@field:SerializedName("id")
+	val id: Int? = null,
 
-    @SerializedName("email")
-    val email : String? = null,
+	@field:SerializedName("email")
+	val email: String? = null,
 
-    @SerializedName("roles")
-    val roles : String? = null
+	@field:SerializedName("username")
+	val username: String? = null
 )
-
-

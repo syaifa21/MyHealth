@@ -43,34 +43,27 @@ class LoginActivity : AppCompatActivity() {
                         password = binding.edLoginPassword.text.toString()
                     )
 
-                    client.enqueue(object : Callback<LoginResponse> {
+                    client.enqueue(object: Callback<LoginResponse>{
                         override fun onResponse(
                             call: Call<LoginResponse>,
                             response: Response<LoginResponse>
                         ) {
                             val res = response.body()
-                            if (res !== null) {
-                                Log.d("hasillogin", "berhasil")
+                            if(response.isSuccessful && res != null){
                                 sharedPreferences
                                     .edit()
                                     .putString("token", res.username)
-                                    .putString("token", res.email)
-                                    .putInt("token", res.id!!)
                                     .apply()
 
                                 startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                                 finish()
-                            } else {
-                                Toast.makeText(
-                                    this@LoginActivity,
-                                    response.message(),
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                            }else{
+                                Toast.makeText(this@LoginActivity, response.message(), Toast.LENGTH_SHORT).show()
                             }
                         }
 
                         override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                            TODO("Not yet implemented")
+                            Log.d("hasillogin", "gagal")
                         }
 
                     })
