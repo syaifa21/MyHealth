@@ -6,8 +6,8 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
 
-class PasswordEditText: AppCompatEditText {
-    constructor(context: Context): super(context){
+class PasswordEditText : AppCompatEditText {
+    constructor(context: Context) : super(context) {
         init()
     }
 
@@ -15,19 +15,23 @@ class PasswordEditText: AppCompatEditText {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
     private fun init() {
-        addTextChangedListener(object : TextWatcher{
+        addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                error = if(p0.toString().length < 1){
+                error = if (p0.toString().length < 1) {
                     "Kata sandi tidak boleh kurang dari 8 karakter"
-                }else{
+                } else {
                     null
                 }
             }

@@ -2,15 +2,15 @@ package com.dicoding.myhealth
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.dicoding.myhealth.api.ApiConfig
 import com.dicoding.myhealth.api.response.LoginResponse
 import com.dicoding.myhealth.databinding.ActivityLoginBinding
-
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
@@ -37,19 +37,20 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginBtn.setOnClickListener {
             if (binding.username.text?.isNotEmpty() == true && binding.edLoginPassword.text?.isNotEmpty() == true) {
+                binding.loading.visibility = View.VISIBLE
                 lifecycleScope.launch {
                     val client = ApiConfig.getApiService().signin(
                         name = binding.username.text.toString(),
                         password = binding.edLoginPassword.text.toString()
                     )
 
-                    client.enqueue(object: Callback<LoginResponse>{
+                    client.enqueue(object : Callback<LoginResponse> {
                         override fun onResponse(
                             call: Call<LoginResponse>,
                             response: Response<LoginResponse>
                         ) {
                             val res = response.body()
-                            if(response.isSuccessful && res != null){
+                            if (response.isSuccessful && res != null) {
                                 sharedPreferences
                                     .edit()
                                     .putString("username", res.username)
@@ -57,8 +58,12 @@ class LoginActivity : AppCompatActivity() {
 
                                 startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                                 finish()
-                            }else{
-                                Toast.makeText(this@LoginActivity, response.message(), Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    response.message(),
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         }
 

@@ -13,4 +13,5 @@
     <string name="sudah_mempunyai_akun">Sudah Punya Akun</string>
     <string name="masuk">Masuk</string>
     <string name="hint_username">Username</string>
+    <string name="user">user</string>
 </resources>
