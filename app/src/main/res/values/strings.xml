@@ -14,4 +14,6 @@
     <string name="masuk">Masuk</string>
     <string name="hint_username">Username</string>
     <string name="user">user</string>
+    <string name="hint_username_edit_text">Username</string>
+    <string name="Dont_have_account">Don\'t have an account?</string>
 </resources>
