@@ -5,7 +5,9 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import com.dicoding.myhealth.databinding.ActivityHomeBinding
+import com.dicoding.myhealth.dummydata.foods.FoodsData
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
