@@ -1,7 +1,10 @@
 package com.dicoding.myhealth
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +16,7 @@ import com.dicoding.myhealth.dummydata.activity.ActivityAdapter
 import com.dicoding.myhealth.dummydata.foods.Food
 import com.dicoding.myhealth.dummydata.foods.FoodAdapter
 import com.dicoding.myhealth.widget.SpaceItemDecoration
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 @Suppress("DEPRECATION")
 class HomeActivity : AppCompatActivity() {
@@ -41,6 +45,24 @@ class HomeActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.bottom_navigation_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.home ->{
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.profile ->{
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
     private fun getListFoods(): ArrayList<Food>{
         val name = resources.getStringArray(R.array.food_name)
