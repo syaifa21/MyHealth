@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="Activity"
+                android:text="@string/activity"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kalori"
+                    android:text="@string/kalories"
                     android:textColor="@color/black"
                     android:textSize="8dp"
                     tools:ignore="TextSizeCheck" />
@@ -68,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
-                    android:text="250cal"
+                    android:text="@string/_250cal"
                     android:textColor="@color/black"
                     android:textSize="8sp" />
 
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="25dp"
-                android:text="Per 30 menit"
+                android:text="@string/per_30_minutes"
                 android:textColor="@color/abuabu3"
                 android:textSize="5sp"
                 tools:ignore="DuplicateIds" />

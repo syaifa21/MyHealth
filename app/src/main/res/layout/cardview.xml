@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="Makanan"
+                android:text="@string/food"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -70,19 +70,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kalori"
+                    android:text="@string/kalories"
                     android:textColor="@color/black"
                     android:textSize="8dp"
-                    tools:ignore="TextSizeCheck" />
+                    tools:ignore="SpUsage,TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/kalori"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:text="250cal"
+                    android:layout_marginStart="19dp"
+                    android:text="@string/_250cal"
                     android:textColor="@color/black"
-                    android:textSize="8sp" />
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
 
             </LinearLayout>
 
@@ -95,19 +96,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lemak"
+                    android:text="@string/fat"
                     android:textColor="@color/black"
                     android:textSize="8dp"
-                    tools:ignore="TextSizeCheck" />
+                    tools:ignore="SpUsage,TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/lemak"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:text="15gr"
+                    android:layout_marginStart="36dp"
+                    android:text="@string/_15gr"
                     android:textColor="@color/black"
-                    android:textSize="8sp" />
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
 
             </LinearLayout>
 
@@ -120,19 +122,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Protein"
+                    android:text="@string/proteins"
                     android:textColor="@color/black"
                     android:textSize="8dp"
-                    tools:ignore="TextSizeCheck" />
+                    tools:ignore="SpUsage,TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp"
-                    android:text="20gr"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/_20gr"
                     android:textColor="@color/black"
-                    android:textSize="8sp" />
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
 
 
             </LinearLayout>
@@ -142,10 +145,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:text="per 100gr sajian"
+                android:text="@string/per_100gr_serving"
                 android:textColor="@color/abuabu3"
                 android:textSize="5sp"
-                tools:ignore="DuplicateIds" />
+                tools:ignore="DuplicateIds,SmallSp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

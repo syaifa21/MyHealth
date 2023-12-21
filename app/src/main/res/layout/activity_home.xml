@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/patuaone"
-                android:text="Home"
+                android:text="@string/home"
                 android:textColor="@color/black"
                 android:textSize="32sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/patuaone"
-                android:text="Hello,"
+                android:text="@string/hello"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout"
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/patuaone"
-                android:text="User"
+                android:text="@string/user"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/patuaone"
-                android:text="Daily \nCalories"
+                android:text="@string/daily_calories"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
@@ -98,7 +98,7 @@
                 android:background="@drawable/rounded"
                 android:backgroundTint="@color/white"
                 android:gravity="center"
-                android:text="2500Cal"
+                android:text="@string/_2500cal"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/patuaone"
-            android:text="Foods Recomendations"
+            android:text="@string/foods_recomendations"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -149,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/patuaone"
-            android:text="Activity Recomendations"
+            android:text="@string/activity_recomendations"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -183,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/patuaone"
-                android:text="Quotes"
+                android:text="@string/quotes"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -206,13 +206,14 @@
                     android:layout_width="259dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    tools:ignore="TextSizeCheck">
 
                     <TextView
                         android:id="@+id/hero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hero"
+                        android:text="@string/hero"
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -221,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:maxLines="2"
-                        android:text="ahsdgsahdga asgdashdgashd asidag sdhbadkhab ahsvdhasvd ahsvdav "
+                        android:text="@string/lorem"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -240,6 +241,7 @@
                     android:outlineProvider="background"
                     android:scaleType="fitCenter"
                     app:shapeAppearanceOverlay="@drawable/rounded"
+                    tools:ignore="ImageContrastCheck"
                     tools:src="@tools:sample/avatars" />
 
             </LinearLayout>
