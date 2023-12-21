@@ -62,40 +62,20 @@ class HomeActivity : AppCompatActivity() {
         tvusername.text = login
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navbar)
-
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
                     true
                 }
                 R.id.profile -> {
                     val intent = Intent(this, ProfileActivity::class.java)
                     startActivity(intent)
+                    finish()
                     true
                 }
                 else -> false
             }
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.bottom_navigation_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.home ->{
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.profile ->{
-                val intent = Intent(this, ProfileActivity::class.java)
-                startActivity(intent)
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
     private fun getListFoods(): ArrayList<Food>{
         val name = resources.getStringArray(R.array.food_name)
