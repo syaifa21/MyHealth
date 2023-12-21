@@ -45,11 +45,7 @@ class HomeActivity : AppCompatActivity() {
         showRecyclerListActivity()
         sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
         token = sharedPreferences.getString("username", null).toString()
-        binding.logot.setOnClickListener{
-            sharedPreferences.edit().clear().apply()
-            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
-            finish()
-        }
+
         Log.e("logintoken",token)
         if(sharedPreferences.getString("username", null) == null){
             Log.d("Homeoperoper","oper")
