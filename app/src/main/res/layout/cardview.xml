@@ -143,7 +143,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:text="per 100gr sajian"
-                android:textColor="@color/abuabu3"
+                android:textColor="@color/abuabu1"
                 android:textSize="5sp"
                 tools:ignore="DuplicateIds" />
         </LinearLayout>

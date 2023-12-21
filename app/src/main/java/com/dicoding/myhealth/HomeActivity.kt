@@ -3,6 +3,7 @@ package com.dicoding.myhealth
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
@@ -42,8 +43,23 @@ class HomeActivity : AppCompatActivity() {
         rv_activity = findViewById(R.id.rv_activity)
         Activitylist.addAll(getListActivity())
         showRecyclerListActivity()
+        sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
+        token = sharedPreferences.getString("username", null).toString()
+        binding.logot.setOnClickListener{
+            sharedPreferences.edit().clear().apply()
+            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
+            finish()
+        }
+        Log.e("logintoken",token)
+        if(sharedPreferences.getString("username", null) == null){
+            Log.d("Homeoperoper","oper")
+            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
+            finish()
+        }
 
-
+        val login = sharedPreferences.getString("username", null).toString()
+        val tvusername = binding.username
+        tvusername.text = login
 
     }
 
@@ -109,18 +125,6 @@ class HomeActivity : AppCompatActivity() {
         rv_activity.addItemDecoration(SpaceItemDecoration(spaceBetweenItems))
     }
 
-//        sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
-//        token = sharedPreferences.getString("token", null).toString()
-//        binding.logot.setOnClickListener{
-//            sharedPreferences.edit().clear().apply()
-//            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
-//            finish()
-//        }
-//        Log.e("logintoken",token)
-//        if(sharedPreferences.getString("token", null) == null){
-//            Log.d("Homeoperoper","oper")
-//            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
-//            finish()
-//        }
+
 //    }
     }

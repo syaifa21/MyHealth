@@ -80,7 +80,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="25dp"
                 android:text="Per 30 menit"
-                android:textColor="@color/abuabu3"
+                android:textColor="@color/abuabu1"
                 android:textSize="5sp"
                 tools:ignore="DuplicateIds" />
         </LinearLayout>

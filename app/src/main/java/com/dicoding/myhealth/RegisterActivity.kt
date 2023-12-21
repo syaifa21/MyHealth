@@ -1,5 +1,6 @@
 package com.dicoding.myhealth
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -21,6 +22,9 @@ class RegisterActivity : AppCompatActivity() {
         binding.registerBtn.setOnClickListener {
             binding.loading.visibility = View.VISIBLE
             register()
+        }
+        binding.loginTextview.setOnClickListener {
+            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
         }
 
     }
