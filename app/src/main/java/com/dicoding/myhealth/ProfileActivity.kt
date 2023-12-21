@@ -7,6 +7,7 @@ import com.dicoding.myhealth.databinding.ActivityLoginBinding
 import com.dicoding.myhealth.databinding.ActivityProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+@Suppress("DEPRECATION")
 class ProfileActivity: AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
