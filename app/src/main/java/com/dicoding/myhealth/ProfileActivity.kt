@@ -3,7 +3,6 @@ package com.dicoding.myhealth
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.myhealth.databinding.ActivityLoginBinding
 import com.dicoding.myhealth.databinding.ActivityProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -16,6 +15,7 @@ class ProfileActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navbar)
+        bottomNavigationView.menu.findItem(R.id.profile).isChecked = true
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
