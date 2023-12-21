@@ -63,16 +63,16 @@
     </string-array>
 
     <string-array name="image_foods">
-            <item>https://upload.wikimedia.org/wikipedia/commons/a/ad/Sate_Ponorogo.jpg</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/1/15/Chaufa_salvaje_Selva_17042010.JPG</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/f/f5/Ayam_bakar_bumbu_rujak.jpg</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/a/a2/Gado_gado.jpg</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/7/70/Rendang_daging_sapi_asli_Padang.JPG</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/0/05/Soto_ayam.JPG</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/f/f0/Mi_Goreng_GM.jpg</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/1/13/Cap_Cai.JPG</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/a/a6/Nasi_uduk_netherlands.jpg</item>
-            <item>https://upload.wikimedia.org/wikipedia/commons/4/40/Semur_Daging_Kentang.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/a/ad/Sate_Ponorogo.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/1/15/Chaufa_salvaje_Selva_17042010.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/f/f5/Ayam_bakar_bumbu_rujak.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/a/a2/Gado_gado.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/7/70/Rendang_daging_sapi_asli_Padang.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/0/05/Soto_ayam.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/f/f0/Mi_Goreng_GM.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/1/13/Cap_Cai.JPG</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/a/a6/Nasi_uduk_netherlands.jpg</item>
+        <item>https://upload.wikimedia.org/wikipedia/commons/4/40/Semur_Daging_Kentang.JPG</item>
     </string-array>
 
 
