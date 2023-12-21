@@ -5,8 +5,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiConfigBMI {
-    companion object {
+object ApiConfigBMI {
+
         private val BASE_URl = "http://34.128.76.240/"
         fun getApiServiceBMI(): ApiServiceBMI {
             val loggingInterceptor =
@@ -23,4 +23,3 @@ class ApiConfigBMI {
             return retrofit.create(ApiServiceBMI::class.java)
         }
     }
-}

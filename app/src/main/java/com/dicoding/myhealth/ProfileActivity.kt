@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.myhealth.api.ApiConfigBMI
 import com.dicoding.myhealth.api.response.BMIResponse
+import com.dicoding.myhealth.api.userBMI
 import com.dicoding.myhealth.databinding.ActivityProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
@@ -92,22 +93,20 @@ class ProfileActivity: AppCompatActivity() {
     private fun submit() {
 
         if (binding.edGender.text?.isNotEmpty() == true) {
-            val client = ApiConfigBMI.getApiServiceBMI().submituser(
-                berat = binding.edWeight.id,
-                tinggi = binding.edHeight.id,
-                umur = binding.edAge.id,
-                gender = binding.edGender.text.toString()
+            val client = ApiConfigBMI.getApiServiceBMI().addUser(
+userBMI(berat = binding.edWeight.id, tinggi = binding.edHeight.id, umur = binding.edAge.id,gender = binding.edGender.text.toString())
 
             )
-            client.enqueue(object : Callback<BMIResponse> {
-                override fun onResponse(call: Call<BMIResponse>, response: Response<BMIResponse>) {
+            client.enqueue(object : Callback<userBMI> {
+                override fun onResponse(call: Call<userBMI>, response: Response<userBMI>) {
                     val res = response.body()
                     if (response.isSuccessful && res != null) {
+                        startActivity(Intent(this@ProfileActivity, HomeActivity::class.java))
                         finish()
                     } else {
                         Log.e("hasilogin", response.message())
                         if (res != null) {
-                            Toast.makeText(this@ProfileActivity, res.kategoriBMI.toString(), Toast.LENGTH_SHORT)
+                            Toast.makeText(this@ProfileActivity, res.umur.toString(), Toast.LENGTH_SHORT)
                                 .show()
                         }
                     }
@@ -116,7 +115,7 @@ class ProfileActivity: AppCompatActivity() {
 
                 }
 
-                override fun onFailure(call: Call<BMIResponse>, t: Throwable) {
+                override fun onFailure(call: Call<userBMI>, t: Throwable) {
                     TODO("Not yet implemented")
                 }
             })
