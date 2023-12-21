@@ -61,6 +61,23 @@ class HomeActivity : AppCompatActivity() {
         val tvusername = binding.username
         tvusername.text = login
 
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navbar)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.home -> {
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.profile -> {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

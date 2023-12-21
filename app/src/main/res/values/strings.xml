@@ -23,6 +23,23 @@
     <string name="masukan_gender">Enter Gender</string>
     <string name="submit">Submit</string>
     <string name="logout">Sign Out</string>
+    <string name="daily_calories">Daily \nCalories</string>
+    <string name="_2500cal">2500cal</string>
+    <string name="foods_recomendations">Foods Recomendations</string>
+    <string name="activity_recomendations">Activity Recomendations</string>
+    <string name="quotes">Quotes</string>
+    <string name="hero">Hero</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="kalories">Kalories</string>
+    <string name="_250cal">250cal</string>
+    <string name="fat">Fat</string>
+    <string name="_15gr">15gr</string>
+    <string name="proteins">Proteins</string>
+    <string name="_20gr">20gr</string>
+    <string name="per_100gr_serving">per 100gr serving</string>
+    <string name="food">Food</string>
+    <string name="activity">Activity</string>
+    <string name="per_30_minutes">Per 30 minutes</string>
 
 
     <string-array name="food_name">
