@@ -40,6 +40,8 @@
     <string name="food">Food</string>
     <string name="activity">Activity</string>
     <string name="per_30_minutes">Per 30 minutes</string>
+    <string name="home">Home</string>
+    <string name="profile2">Profile</string>
 
 
     <string-array name="food_name">
