@@ -101,6 +101,7 @@ userBMI(berat = binding.edWeight.id, tinggi = binding.edHeight.id, umur = bindin
                 override fun onResponse(call: Call<userBMI>, response: Response<userBMI>) {
                     val res = response.body()
                     if (response.isSuccessful && res != null) {
+
                         startActivity(Intent(this@ProfileActivity, HomeActivity::class.java))
                         finish()
                     } else {
