@@ -3,11 +3,24 @@ package com.dicoding.myhealth
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import com.dicoding.myhealth.api.ApiConfig
+import com.dicoding.myhealth.api.ApiConfigBMI
+import com.dicoding.myhealth.api.response.BMIResponse
+import com.dicoding.myhealth.api.response.LoginResponse
+import com.dicoding.myhealth.api.response.RegisterResponse
 
 import com.dicoding.myhealth.databinding.ActivityProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ProfileActivity: AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
@@ -36,6 +49,11 @@ class ProfileActivity: AppCompatActivity() {
                 else -> false
             }
         }
+        binding.submitBtn.setOnClickListener {
+            binding.loading.visibility = View.VISIBLE
+            submit()
+                    }
+
     }
     private fun showYesNoDialog() {
         val builder = AlertDialog.Builder(this)
@@ -69,5 +87,38 @@ class ProfileActivity: AppCompatActivity() {
         // Tampilkan dialog
         val dialog = builder.create()
         dialog.show()
+    }
+    private fun submit() {
+
+        if (binding.edGender.text?.isNotEmpty() == true) {
+            val client = ApiConfigBMI.getApiServiceBMI().submituser(
+                berat = binding.edWeight.id,
+                tinggi = binding.edHeight.id,
+                umur = binding.edAge.id,
+                gender = binding.edGender.text.toString()
+
+                )
+            client.enqueue(object : Callback<BMIResponse> {
+                override fun onResponse(call: Call<BMIResponse>, response: Response<BMIResponse>) {
+                    val res = response.body()
+                    if (response.isSuccessful && res != null) {
+                        finish()
+                    } else {
+                        Log.e("hasilogin", response.message())
+                        if (res != null) {
+                            Toast.makeText(this@ProfileActivity, res.kategoriBMI.toString(), Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                    }
+
+
+
+                }
+
+                override fun onFailure(call: Call<BMIResponse>, t: Throwable) {
+                    TODO("Not yet implemented")
+                }
+            })
+        }
     }
 }

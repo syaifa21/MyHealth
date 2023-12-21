@@ -11,7 +11,7 @@ import retrofit2.http.Part
 
 interface ApiServiceBMI {
     @Multipart
-    @POST("hitung-kalori")
+    @POST("hitung-bmi")
     fun submituser(
         @Part("berat") berat: Int,
         @Part("tinggi") tinggi: Int,
