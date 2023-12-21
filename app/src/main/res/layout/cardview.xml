@@ -21,9 +21,9 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgfood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_width="70dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="8dp"
             android:background="@drawable/circle"
             android:scaleType="fitCenter"
             android:maxWidth="70dp"
