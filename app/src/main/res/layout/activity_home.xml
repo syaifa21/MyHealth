@@ -174,7 +174,7 @@
             tools:listitem="@layout/cardview2" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="348dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -194,7 +194,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/recyclerViewRekomendasiAktivitas" />
 
             <LinearLayout
-                android:layout_width="350dp"
+                android:layout_width="348dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/radius_line"
@@ -231,16 +231,17 @@
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxHeight="80dp"
-                    android:maxWidth="62dp"
                     android:layout_gravity="center"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
                     android:layout_marginStart="10dp"
-                    android:background="@drawable/albert"
-                    app:shapeAppearanceOverlay="@drawable/rounded"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/circle"
                     android:clipToOutline="true"
-                    android:outlineProvider="background"/>
+                    android:maxWidth="62dp"
+                    android:maxHeight="80dp"
+                    android:outlineProvider="background"
+                    android:scaleType="fitCenter"
+                    app:shapeAppearanceOverlay="@drawable/rounded"
+                    tools:src="@tools:sample/avatars" />
 
             </LinearLayout>
 
