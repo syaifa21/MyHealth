@@ -7,8 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfigBMI {
     companion object {
-        private val BASE_URl = "http://34.125.215.6/api/auth/"
-        fun getApiService(): ApiService {
+        private val BASE_URl = "http://34.128.76.240/"
+        fun getApiServiceBMI(): ApiService {
             val loggingInterceptor =
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
             val client = OkHttpClient.Builder()
