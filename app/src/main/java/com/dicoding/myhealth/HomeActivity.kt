@@ -43,7 +43,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         rv_foods = findViewById(R.id.rv_foods)
-        val spacingInPixels = resources.getDimensionPixelSize(R.dimen.corner_radius) // Gantilah R.dimen.spacing dengan resource yang sesuai
+        val spacingInPixels =
+            resources.getDimensionPixelSize(R.dimen.corner_radius) // Gantilah R.dimen.spacing dengan resource yang sesuai
         val itemDecoration = SpaceItemDecoration(spacingInPixels)
         rv_foods.addItemDecoration(itemDecoration)
         if (intent.hasExtra("rekomendasiKaloriList")) {
@@ -53,6 +54,8 @@ class HomeActivity : AppCompatActivity() {
         }
         rv_activity = findViewById(R.id.rv_activity)
         Activitylist.addAll(getListActivity())
+
+
         sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
         token = sharedPreferences.getString("username", null).toString()
 
@@ -62,14 +65,23 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
             finish()
         }
+
+        val kaloribmi = sharedPreferences.getString("bmi", null)
+
+        val tvcal = binding.tvCal
+        val length = 5
+        val hasilcal = kaloribmi?.take(length)
+        tvcal.text = hasilcal
+
         val login = sharedPreferences.getString("username", null).toString()
+
         val tvusername = binding.username
         tvusername.text = login
 
         rekomendasiKaloriList = getDataFromSharedPreferences()
         showRecyclerListRekomendasi()
         Log.d("RekomendasiList", rekomendasiKaloriList.toString())
-//        showRecyclerListActivity()
+        showRecyclerListActivity()
 
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navbar)
@@ -113,12 +125,12 @@ class HomeActivity : AppCompatActivity() {
         return listactivity
     }
 
-//    private fun showRecyclerListActivity() {
-//        val layoutManager = LinearLayoutManager(this)
-//        binding.rvFoods.layoutManager = layoutManager
-//        val rekomendasiAdapter = RekomendasiAdapter(rekomendasiKaloriList)
-//        binding.rvFoods.adapter = rekomendasiAdapter
-//    }
+    private fun showRecyclerListActivity() {
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvActivity.layoutManager = layoutManager
+        val rekomendasiAdapter = ActivityAdapter(Activitylist)
+        binding.rvActivity.adapter = rekomendasiAdapter
+    }
 
     private fun getDataFromSharedPreferences(): List<RekomendasiKaloriItem> {
         val sharedPreferences = getSharedPreferences("rekomendasi", MODE_PRIVATE)

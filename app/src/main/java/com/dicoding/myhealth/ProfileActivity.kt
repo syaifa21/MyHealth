@@ -82,11 +82,21 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun submit() {
         if (binding.edGender.text?.isNotEmpty() == true) {
+
+            val beratuser = binding.edWeight.text.toString()
+            val intberat: Int = if (beratuser.isNotEmpty()) beratuser.toInt() else 0
+
+            val tinggiuser = binding.edHeight.text.toString()
+            val inttinggi: Int = if (tinggiuser.isNotEmpty()) tinggiuser.toInt() else 0
+
+            val umuruser = binding.edWeight.text.toString()
+            val intumur: Int = if (umuruser.isNotEmpty()) umuruser.toInt() else 0
+
             val client = ApiConfigBMI.getApiServiceBMI().addUser(
                 userBMI(
-                    berat = binding.edWeight.id,
-                    tinggi = binding.edHeight.id,
-                    umur = binding.edAge.id,
+                    berat = intberat,
+                    tinggi = inttinggi,
+                    umur = intumur,
                     gender = binding.edGender.text.toString()
                 )
             )
@@ -96,7 +106,10 @@ class ProfileActivity : AppCompatActivity() {
                     if (response.isSuccessful && res != null) {
                         // Response berhasil, dapatkan data rekomendasi kalori
                         val responseRekomendasiKaloriList = res.rekomendasiKalori
-
+                        sharedPreferences
+                            .edit()
+                            .putString("bmi", res.bmi.toString())
+                            .apply()
 
                         // Tambahkan data ke dalam list
                         responseRekomendasiKaloriList?.let {

@@ -91,10 +91,12 @@
                 app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
             <TextView
+                android:id="@+id/tv_cal"
                 android:layout_width="96dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="4dp"
+
                 android:background="@drawable/rounded"
                 android:backgroundTint="@color/white"
                 android:gravity="center"
@@ -212,7 +214,7 @@
                         android:id="@+id/hero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hero"
+                        android:text="Albert Eisten"
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -221,7 +223,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:maxLines="2"
-                        android:text="ahsdgsahdga asgdashdgashd asidag sdhbadkhab ahsvdhasvd ahsvdav "
+                        android:text="I have no special talent. I am only passionately curious."
                         android:textColor="@color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -236,11 +238,12 @@
                     android:background="@drawable/circle"
                     android:clipToOutline="true"
                     android:maxWidth="62dp"
+
                     android:maxHeight="80dp"
                     android:outlineProvider="background"
                     android:scaleType="fitCenter"
                     app:shapeAppearanceOverlay="@drawable/rounded"
-                    tools:src="@tools:sample/avatars" />
+                    android:src="@drawable/albert" />
 
             </LinearLayout>
 

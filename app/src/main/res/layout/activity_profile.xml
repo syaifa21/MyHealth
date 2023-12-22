@@ -40,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
+            android:inputType="number"
 
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,6 +58,7 @@
 
         <EditText
             android:id="@+id/ed_height"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -93,7 +95,8 @@
         app:boxStrokeColor="@color/green"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="10dp"
-        android:hint="@string/masukan_gender">
+        android:inputType="number"
+        android:hint="@string/male_female">
         <EditText
             android:id="@+id/ed_gender"
             android:layout_width="match_parent"

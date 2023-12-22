@@ -28,7 +28,7 @@
     <string name="foods_recomendations">Foods Recomendations</string>
     <string name="activity_recomendations">Activity Recomendations</string>
     <string name="quotes">Quotes</string>
-    <string name="hero">Hero</string>
+    <string name="hero">Albert Eisten</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="kalories">Kalories</string>
     <string name="_250cal">250cal</string>
@@ -42,6 +42,7 @@
     <string name="per_30_minutes">Per 30 minutes</string>
     <string name="home">Home</string>
     <string name="profile2">Profile</string>
+    <string name="male_female">Enter Gender \"male\" or \"female\"</string>
 
 
     <string-array name="food_name">
@@ -137,16 +138,16 @@
     </string-array>
 
     <string-array name="activity_img">
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
-        <item>https://pin.it/26ZwgDt</item>
+        <item>https://cdn0-production-images-kly.akamaized.net/9vq63HOTZL0nvCrpC8IuC-Ozvuk=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2467658/original/072964900_1543234569-push_up.jpg</item>
+        <item>https://o-cdn-cas.sirclocdn.com/parenting/images/2_GSuQzKF.width-800.format-webp.webp</item>
+        <item>https://cdns.klimg.com/merdeka.com/i/w/news/2022/06/14/1443917/540x270/6-manfaat-brisk-walking-bagi-tubuh-bantu-jaga-kesehatan-fisik-dan-mental.jpg/item></item>
+        <item>https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/01/26050335/Catat-Ini-Waktu-Terbaik-untuk-Olahraga-Jogging.jpg.webp</item>
+        <item>https://hips.hearstapps.com/hmg-prod/images/road-bike-tips-0539-preview-64d24716ef87b.jpg</item>
+        <item>https://www.health.com/thmb/Yv4HuoQyNbHNNxgtOTm63zqxurQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-Swimming-080c78802f384a4687df5a3b13d5611e-3719a8e40a3c4c43a63a4d795e47c505.jpg</item>
+        <item>https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/29044522/Yoga.jpg.webp</item>
+        <item>https://images.ctfassets.net/ipjoepkmtnha/3jARnoyec8OTNBoJXOVo7u/272850864b851ec4e5ba28eae6b52cb8/jump-rope-feature-fluid-motion.jpg</item>
+        <item>https://foto.kontan.co.id/ZSuH7lUV97U1Y05S3r0yu_DjupM=/smart/filters:format(webp)/2023/01/06/828570691p.jpg</item>
+        <item>https://dance-teacher.com/wp-content/uploads/2021/02/how-britt-stewart-became-the-first-black-female-pr.jpg</item>
     </string-array>
 
 </resources>
