@@ -41,7 +41,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:inputType="textPassword"
                 tools:ignore="MissingConstraints" />
         </com.google.android.material.textfield.TextInputLayout>
 
