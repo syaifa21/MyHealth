@@ -101,12 +101,17 @@ class ProfileActivity : AppCompatActivity() {
                         // Tambahkan data ke dalam list
                         responseRekomendasiKaloriList?.let {
                             val limitedList = it.take(10)
-                            rekomendasiKaloriList.addAll(limitedList.filterNotNull())
+                            rekomendasiKaloriList.addAll(it.filterNotNull())
                             saveRekomendasiKaloriListToSharedPreferences(rekomendasiKaloriList)
                             // Redirect to HomeActivity after saving data
                             startActivity(Intent(this@ProfileActivity, HomeActivity::class.java))
                             finish()
                         }
+
+
+                        startActivity(Intent(this@ProfileActivity, HomeActivity::class.java))
+                        finish()
+
                     } else {
                         Log.e("hasilogin", response.message())
                         if (res != null) {
@@ -126,12 +131,11 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
-    // Metode untuk menyimpan data ke SharedPreferences
     private fun saveRekomendasiKaloriListToSharedPreferences(list: List<RekomendasiKaloriItem>) {
         val sharedPreferences = getSharedPreferences("rekomendasi", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        val limitedList = list.take(10)
-        val jsonList = convertListToJsonString(limitedList)
+//        val limitedList = list.take(10)
+        val jsonList = convertListToJsonString(list)
         editor.putString("rekomendasiKaloriList", jsonList)
         editor.apply()
     }

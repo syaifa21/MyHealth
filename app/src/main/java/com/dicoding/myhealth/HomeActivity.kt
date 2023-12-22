@@ -10,10 +10,10 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.dicoding.myhealth.api.RekomendasiKaloriItem
 import com.dicoding.myhealth.databinding.ActivityHomeBinding
 import com.dicoding.myhealth.dummydata.activity.Activity
+import com.dicoding.myhealth.dummydata.activity.ActivityAdapter
 import com.dicoding.myhealth.widget.SpaceItemDecoration
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
@@ -25,6 +25,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var rv_foods: RecyclerView
     private lateinit var rv_activity: RecyclerView
     private var Activitylist = ArrayList<Activity>()
+    private lateinit var activityAdapter: ActivityAdapter
     private lateinit var binding: ActivityHomeBinding
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var token: String
@@ -66,8 +67,9 @@ class HomeActivity : AppCompatActivity() {
         tvusername.text = login
 
         rekomendasiKaloriList = getDataFromSharedPreferences()
+        showRecyclerListRekomendasi()
         Log.d("RekomendasiList", rekomendasiKaloriList.toString())
-        showRecyclerListActivity()
+//        showRecyclerListActivity()
 
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navbar)
@@ -90,10 +92,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun showRecyclerListRekomendasi() {
-        val layoutManager = StaggeredGridLayoutManager(
-            2,
-            StaggeredGridLayoutManager.HORIZONTAL
-        )
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val rvRekomendasi = findViewById<RecyclerView>(R.id.rv_foods)
         rvRekomendasi.layoutManager = layoutManager
         val limitedList = rekomendasiKaloriList.take(10) // Take only 10 items
@@ -114,12 +113,12 @@ class HomeActivity : AppCompatActivity() {
         return listactivity
     }
 
-    private fun showRecyclerListActivity() {
-        val layoutManager = LinearLayoutManager(this)
-        binding.rvFoods.layoutManager = layoutManager
-        val rekomendasiAdapter = RekomendasiAdapter(rekomendasiKaloriList)
-        binding.rvFoods.adapter = rekomendasiAdapter
-    }
+//    private fun showRecyclerListActivity() {
+//        val layoutManager = LinearLayoutManager(this)
+//        binding.rvFoods.layoutManager = layoutManager
+//        val rekomendasiAdapter = RekomendasiAdapter(rekomendasiKaloriList)
+//        binding.rvFoods.adapter = rekomendasiAdapter
+//    }
 
     private fun getDataFromSharedPreferences(): List<RekomendasiKaloriItem> {
         val sharedPreferences = getSharedPreferences("rekomendasi", MODE_PRIVATE)
