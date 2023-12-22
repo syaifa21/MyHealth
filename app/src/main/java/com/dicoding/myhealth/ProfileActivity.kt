@@ -108,7 +108,10 @@ class ProfileActivity : AppCompatActivity() {
                         val responseRekomendasiKaloriList = res.rekomendasiKalori
                         sharedPreferences
                             .edit()
-                            .putString("bmi", res.bmi.toString())
+                            .putString("gender", binding.edGender.text.toString())
+                            .putInt("berat", intberat)
+                            .putInt("tinggi", inttinggi)
+                            .putInt("umur", intumur)
                             .apply()
 
                         // Tambahkan data ke dalam list

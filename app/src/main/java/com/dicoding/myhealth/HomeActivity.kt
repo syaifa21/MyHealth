@@ -65,13 +65,18 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
             finish()
         }
+        val tvcal =binding.tvCal
+        val beratuser = sharedPreferences.getInt("berat",0)
+        val tinggiuser = sharedPreferences.getInt("tinggi",0)
+        val umuruser = sharedPreferences.getInt("umur",0)
+        val genderuser = sharedPreferences.getString("gender",null)
 
-        val kaloribmi = sharedPreferences.getString("bmi", null)
-
-        val tvcal = binding.tvCal
-        val length = 5
-        val hasilcal = kaloribmi?.take(length)
-        tvcal.text = hasilcal
+        val kalori = if (genderuser == "male"){
+            66.5 + (13.75 * beratuser) + (5.003 * tinggiuser) - (6.75 * umuruser)
+        } else {
+            655.1 + (9.563 * beratuser) + (1.850 * tinggiuser) - (4.676 * umuruser)
+        }
+        tvcal.text = kalori.toString()
 
         val login = sharedPreferences.getString("username", null).toString()
 
