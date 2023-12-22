@@ -65,7 +65,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
             finish()
         }
-        val tvcal =binding.tvCal
+        val tvcal = binding.tvCal
         val beratuser = sharedPreferences.getInt("beratuser",0)
         val tinggiuser = sharedPreferences.getInt("tinggiuser",0)
         val umuruser = sharedPreferences.getInt("umuruser",0)
@@ -76,7 +76,10 @@ class HomeActivity : AppCompatActivity() {
         } else {
             655.1 + (9.563 * beratuser) + (1.850 * tinggiuser) - (4.676 * umuruser)
         }
-        tvcal.text = kalori.toString()
+        val stringkalori = kalori.toString()
+        val maxlengt= 4
+        val limitedString = stringkalori.take(maxlengt)
+        tvcal.text = limitedString
 
         val login = sharedPreferences.getString("username", null).toString()
 
