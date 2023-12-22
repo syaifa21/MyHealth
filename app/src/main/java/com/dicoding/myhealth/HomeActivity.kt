@@ -66,10 +66,10 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
         val tvcal =binding.tvCal
-        val beratuser = sharedPreferences.getInt("berat",0)
-        val tinggiuser = sharedPreferences.getInt("tinggi",0)
-        val umuruser = sharedPreferences.getInt("umur",0)
-        val genderuser = sharedPreferences.getString("gender",null)
+        val beratuser = sharedPreferences.getInt("beratuser",0)
+        val tinggiuser = sharedPreferences.getInt("tinggiuser",0)
+        val umuruser = sharedPreferences.getInt("umuruser",0)
+        val genderuser = sharedPreferences.getString("genderuser",null)
 
         val kalori = if (genderuser == "male"){
             66.5 + (13.75 * beratuser) + (5.003 * tinggiuser) - (6.75 * umuruser)

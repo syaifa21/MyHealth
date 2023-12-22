@@ -89,7 +89,7 @@ class ProfileActivity : AppCompatActivity() {
             val tinggiuser = binding.edHeight.text.toString()
             val inttinggi: Int = if (tinggiuser.isNotEmpty()) tinggiuser.toInt() else 0
 
-            val umuruser = binding.edWeight.text.toString()
+            val umuruser = binding.edAge.text.toString()
             val intumur: Int = if (umuruser.isNotEmpty()) umuruser.toInt() else 0
 
             val client = ApiConfigBMI.getApiServiceBMI().addUser(
